@@ -6,6 +6,7 @@ const readline = require("readline");
 const { pathfinder, Movements, goals } = require("mineflayer-pathfinder");
 const minecraftData = require("minecraft-data")("1.8"); // Replace with the correct version
 const { navigatePlugin } = require("mineflayer-navigate");
+require("dotenv").config();
 
 // /is visit LemonNoob12322
 // /is visit TheSmartyBee
@@ -34,14 +35,14 @@ const colors = {
 const bot = mineflayer.createBot({
   host: "Play.JartexNetwork.com",
   port: 25565,
-  username: "MinecraftMinion",
+  username: process.env.BOT_NAME,
   version: 1.8,
 });
 
 bot.once("login", () => {
   console.log("Successfully logged in");
   setTimeout(() => {
-    bot.chat("/login Nivi@c103");
+    bot.chat(process.env.SERVER_LOGIN);
     console.log(
       colors.green + "Password written in chat for login" + colors.reset
     );
@@ -385,11 +386,10 @@ function logDurability() {
   }
 }
 
-
 function checkInventory() {
   const emptySlotCount = bot.inventory.emptySlotCount();
   if (emptySlotCount === 0) {
-    console.log('Bot inventory is full!');
+    console.log("Bot inventory is full!");
     hunt(false);
   } else {
     //console.log('Bot inventory is not full yet.');

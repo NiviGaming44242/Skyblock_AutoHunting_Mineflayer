@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "goal": "^1.0.1",
     "install": "^0.13.0",
