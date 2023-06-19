@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "goal": "^1.0.1",
+    "install": "^0.13.0",
+    "minecraft-data": "^3.36.1",
+    "mineflayer": "^4.8.1",
+    "mineflayer-navigate": "^0.0.10",
+    "mineflayer-pathfinder": "^2.4.4",
+    "mineflayer-web-inventory": "^1.8.4",
+    "pathfinder": "^0.3.0-1",
+    "readline": "^1.3.0",
+    "vec3": "^0.1.8"
+  }
+}
